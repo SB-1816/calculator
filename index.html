@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <div class="calculator-header">
+        <div>
+            <h1>SmartCalc</h1>
+            <p>Scientific Calculator</p>
+        </div>
+
+        <div class="status">
+            <span></span> ONLINE
+        </div>
+    </div>
+
+    <!-- Display -->
+    <div class="display-box">
+        <div id="expression">Ready</div>
+        <input type="text" id="display" value="0" readonly>
+    </div>
+
+    <!-- Keyboard hint -->
+    <div class="keyboard-hint">
+        ⌨ Keyboard Supported
+    </div>
+
+    <!-- Calculator Buttons -->
+    <div class="buttons">
+
+        <!-- Row 1 -->
+        <button class="special" onclick="clearAll()">AC</button>
+        <button class="special" onclick="deleteLast()">DEL</button>
+        <button class="special" onclick="addValue('(')">(</button>
+        <button class="special" onclick="addValue(')')">)</button>
+        <button class="operator" onclick="addValue('/')">÷</button>
+
+        <!-- Row 2 -->
+        <button class="function" onclick="square()">x²</button>
+        <button class="function" onclick="squareRoot()">√x</button>
+        <button class="function" onclick="power()">xʸ</button>
+        <button class="function" onclick="modulus()">mod</button>
+        <button class="operator" onclick="addValue('*')">×</button>
+
+        <!-- Row 3 -->
+        <button onclick="addValue('7')">7</button>
+        <button onclick="addValue('8')">8</button>
+        <button onclick="addValue('9')">9</button>
+        <button class="function" onclick="percentage()">%</button>
+        <button class="operator" onclick="addValue('-')">−</button>
+
+        <!-- Row 4 -->
+        <button onclick="addValue('4')">4</button>
+        <button onclick="addValue('5')">5</button>
+        <button onclick="addValue('6')">6</button>
+        <button class="function" onclick="reciprocal()">1/x</button>
+        <button class="operator" onclick="addValue('+')">+</button>
+
+        <!-- Row 5 -->
+        <button onclick="addValue('1')">1</button>
+        <button onclick="addValue('2')">2</button>
+        <button onclick="addValue('3')">3</button>
+        <button class="function" onclick="negative()">+/-</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <!-- Row 6 -->
+        <button class="zero" onclick="addValue('0')">0</button>
+        <button onclick="addValue('.')">.</button>
+        <button class="function" onclick="pi()">π</button>
+        <button class="function" onclick="euler()">e</button>
+
+    </div>
+
+    <!-- Keyboard shortcuts -->
+    <div class="shortcuts">
+        <div><b>Enter</b> = Calculate</div>
+        <div><b>Backspace</b> = Delete</div>
+        <div><b>Esc</b> = Clear</div>
+    </div>
+
+    <div class="footer">
+        HTML • CSS • JavaScript
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
